@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#rom {
+    background-color: lightblue;
+    color: black;
+    font-size:80px;
+}
+
+.rom-adv {
+    font-size: 45px;
+}
