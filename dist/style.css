@@ -15,3 +15,9 @@ body {
 .rom-adv {
     font-size: 45px;
 }
+
+.maincont {
+    margin: 100px auto;
+    justify-content:space-evenly;
+    display:flex;
+}
