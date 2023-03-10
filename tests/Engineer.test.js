@@ -20,6 +20,6 @@ test('get engineer github', () => {
 
     const engineer = new Engineer('Pedro', 94, 'palencarg98@gmail.com', "pguerra98");
 
-    expect(engineer.getgithub).toEqual(expect.stringContaining(engineer.github.toString()));
+    expect(engineer.github).toEqual(expect.stringContaining(engineer.github.toString()));
 
 });
