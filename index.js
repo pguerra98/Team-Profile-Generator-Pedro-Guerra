@@ -1,12 +1,12 @@
 const generatefullteam = require('./src/pagetemplate');
 
-const Intern = require ('./lib/Intern');
+const Intern = require('./lib/Intern');
 
-const Engineer = require ('./lib/Engineer');
+const Engineer = require('./lib/Engineer');
 
-const Manager = require ('./lib/Manager');
+const Manager = require('./lib/Manager');
 
-const inquirer = require ('inquirer');
+const inquirer = require('inquirer');
 
 const fs = require ('fs');
 
@@ -167,16 +167,47 @@ const addworker = () => {
 
         type: 'confirm',
 
-        name: 'addworker',
+        name: 'moreworkers',
 
-        message: 'Are there any more employeed to add?',
+        message: 'Are there any more employees to add?',
 
         default: false
         
     },
 
     ])
-}
+
+    .then(workerinfo => {
+
+        let {name, id, email, role, github, school, addworker} = workerinfo;
+
+        let worker;
+
+        if (role === "Engineer") {
+
+            worker = new Engineer(name, id, email, github);
+
+            console.log(worker);
+
+        } else if (role === "Intern") {
+
+            worker = new Intern(name, id, email, school);
+
+        }
+
+        teamarray.push(worker);
+
+        if (moreworkers) {
+
+            return addworker(teamarray);
+
+        } else {
+
+            return teamarray;
+        }
+
+    })
+};
 
 const addmanager = () => {
     return inquirer.prompt ([

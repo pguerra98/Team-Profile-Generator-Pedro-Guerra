@@ -20,6 +20,6 @@ test('get intern school', () => {
 
     const intern = new Intern('Pedro', 94, 'palencarg98@gmail.com', "Kennesaw State University");
 
-    expect(intern.getschool).toEqual(expect.stringContaining(intern.school.toString()));
+    expect(intern.school).toEqual(expect.stringContaining(intern.school.toString()));
 
 });
