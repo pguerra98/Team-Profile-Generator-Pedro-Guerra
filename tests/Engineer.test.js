@@ -4,7 +4,7 @@ test('get worker role', () => {
 
     const engineer = new Engineer('Pedro', 94, 'palencarg98@gmail.com', "pguerra98");
 
-    expect(engineer.getrole()).toEqual("Engineer");
+    expect(engineer.getRole()).toEqual("Engineer");
 
 });
 
