@@ -12,6 +12,6 @@ test('get worker role', () => {
 
     const manager = new Manager('Pedro', 94, 'palencarg98@gmail.com');
 
-    expect(manager.getrole()).toEqual("Manager");
+    expect(manager.getRole()).toEqual("Manager");
 
 });
